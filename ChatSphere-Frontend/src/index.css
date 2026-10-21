@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root { color-scheme: light; }
+html.theme-dark { color-scheme: dark; }
+
+.theme-dark body,
+.theme-dark #root { background: #111827; color: #f3f4f6; }
+.theme-dark .bg-white,
+.theme-dark .surface-card,
+.theme-dark .app-surface { background-color: #1f2937 !important; color: #f3f4f6; }
+.theme-dark .bg-gray-100 { background-color: #111827 !important; }
+.theme-dark .bg-gray-50 { background-color: #374151 !important; }
+.theme-dark .bg-indigo-50 { background-color: #312e81 !important; }
+.theme-dark .hover\:bg-gray-50:hover { background-color: #374151 !important; }
+.theme-dark .hover\:bg-gray-100:hover { background-color: #374151 !important; }
+.theme-dark .border,
+.theme-dark .border-b,
+.theme-dark .border-t,
+.theme-dark .border-l,
+.theme-dark .border-r { border-color: #374151 !important; }
+.theme-dark .text-gray-700 { color: #e5e7eb !important; }
+.theme-dark .text-gray-500,
+.theme-dark .text-gray-400 { color: #9ca3af !important; }
+.theme-dark input,
+.theme-dark textarea,
+.theme-dark select { background-color: #111827; color: #f3f4f6; border-color: #4b5563; }
+.theme-dark input::placeholder,
+.theme-dark textarea::placeholder { color: #9ca3af; }
+.theme-dark .bg-red-50 { background-color: #451a1a !important; }
+.theme-dark .bg-indigo-50 { color: #e0e7ff; }
+
+html, body, #root { min-height: 100%; margin: 0; }
+button, input, textarea, select { font: inherit; }
+
+/* Keep content within narrow viewports and mobile browser controls. */
+html { -webkit-text-size-adjust: 100%; }
+img, video { max-width: 100%; }
+@media (max-width: 767px) {
+  input, textarea, select { font-size: 16px; }
+}
+@supports (padding: env(safe-area-inset-bottom)) {
+  #root { padding-bottom: env(safe-area-inset-bottom); }
+}
